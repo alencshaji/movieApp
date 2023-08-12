@@ -15,14 +15,14 @@
                     <input type="text" id="movieInput" class="form-control" placeholder="Enter movie title...">
                     <button class="btn btn-primary" onclick="search()">Search</button>
                 </div>
-                <div id="movieResult" class="card text-center d-none">
-                    <div class="row">
+                <div id="movieResult" class="card d-none">
+                    <div class="d-flex main   align-items-center p-3">
                         <div class="col-md-4">
                             <img id="moviePoster" class="card-img-top" src="" alt="Movie Poster">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body text-left">
-                                <h5 id="movieTitle" class="card-title"></h5>
+                                <h5 id="movieTitle" class="card-title text-center"></h5>
                                 <p id="genre"></p>
                                 <p id="movieYear"></p>
                                 <p id="moviePlot"></p>
@@ -49,6 +49,12 @@
         }
         .card {
             background-image: url(/images/wp10674119-film-roll-wallpapers.jpg);
+        }
+        @media screen and (max-width: 420px) {
+                 .main{
+                    display: flex;
+                    flex-direction: column;
+                 }
         }
     </style>
 
